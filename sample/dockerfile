@@ -1,6 +1,30 @@
 # Воспользуемся официальным образом для запуска python.
 FROM python:3.10
 
+# В первом контейнере необходимо будет подключение к Kafka, Redis и PostgreSQL.
+# Доработайте Dockerfile, добавив в него переменные для подключения к этим сервисам.
+# Расположите эти параметры между строками FROM python:3.10 и RUN apt-get update -y.
+
+ARG CERT_PATH
+
+ARG KAFKA_HOST
+ARG KAFKA_PORT
+ARG KAFKA_USER
+ARG KAFKA_WORD
+ARG KAFKA_GROUP
+ARG KAFKA_SRC_TOPIC
+ARG KAFKA_DST_TOPIC
+
+ARG REDIS_HOST
+ARG REDIS_PORT
+ARG REDIS_WORD
+
+ARG BASE_HOST
+ARG BASE_PORT
+ARG BASE_NAME
+ARG BASE_USER
+ARG BASE_WORD
+
 # Обновим компоненты в контейнере.
 RUN apt-get update -y
 
