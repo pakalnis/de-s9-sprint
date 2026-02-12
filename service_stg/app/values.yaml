@@ -9,7 +9,7 @@ image:
   repository: cr.yandex/crppmuu3bt91am523r93/stg_service
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "your-tag"
+  tag: "v2026-02-12-r1"
 
 containerPort: 5000
 
@@ -23,13 +23,13 @@ config:
   KAFKA_DST_TOPIC: "stg-service-orders"
 
   BASE_HOST: "rc1a-ifs3uekf5u0t1quk.mdb.yandexcloud.net"
-  BASE_PORT: 6432
+  BASE_PORT: "6432"
   BASE_NAME: "sprint9dwh"
   BASE_USER: "db_user"
   BASE_WORD: "g7uq-Ai[*M4RW]L4"
 
   REDIS_HOST: "c-c9qnqtkaoiibdcd71p4i.rw.mdb.yandexcloud.net"
-  REDIS_PORT: 6380
+  REDIS_PORT: "6380"
   REDIS_WORD: "o@F9o+oQpEBK>m:k"
 
 imagePullSecrets: []
